@@ -6,11 +6,35 @@
   <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap" rel="stylesheet">
   
   <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500" rel="stylesheet">
-  
-<link rel="stylesheet" type="text/css" href="https://oscarjll.github.io/oscarlyonsrepo/home.css">
 
   
   <title>Oscar Lyons</title>
+  
+<script>
+  // Add browser class to body
+  document.addEventListener('DOMContentLoaded', function () {
+    const userAgent = navigator.userAgent.toLowerCase();
+    let browserName = '';
+
+    if (userAgent.includes('edge')) {
+      browserName = 'edge';
+    } else if (userAgent.includes('chrome')) {
+      browserName = 'chrome';
+    } else if (userAgent.includes('firefox')) {
+      browserName = 'firefox';
+    } else if (userAgent.includes('safari') && !userAgent.includes('chrome')) {
+      browserName = 'safari';
+    } else if (userAgent.includes('opr') || userAgent.includes('opera')) {
+      browserName = 'opera';
+    } else if (userAgent.includes('msie') || userAgent.includes('trident')) {
+      browserName = 'ie';
+    }
+
+    if (browserName) {
+      document.body.classList.add('browser-' + browserName);
+    }
+  });
+</script>
 
 </head>
 
@@ -47,7 +71,7 @@
           <a class="four" href="mailto:oscarlyonsmusic@gmail.com?" target="_blank">oscarlyonsmusic@gmail.com
           </a>
           <br>
-          &zwj;+34 684316504
+          <div class=phone>&zwj;+34 684316504</div>
         </div>
       </div>
       
