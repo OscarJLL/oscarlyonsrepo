@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap" rel="stylesheet">
+  
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500" rel="stylesheet">
+  
+<link rel="stylesheet" type="text/css" href="https://raw.githubusercontent.com/OscarJLL/Oscar-Lyons/refs/heads/main/homepage.css">
+
+  
+  <title>Oscar Lyons</title>
+  
+  <style>
+  
+  
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    
+    html {
+      background-color: #131720;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      width: 100%;
+    }
+       
+    body {
+      font-family: "Alumni Sans Pinstripe", 'Montserrat', sans-serif;
+      font-style: normal;
+      font-weight: 600;
+      background-image: url("https://i.postimg.cc/RVr3ZQZG/Open-Folk.jpg");
+      
+      background-size: auto;
+      background-attachment: fixed;
+      background-color: #131720;
+      background-repeat: no-repeat;
+        
+
+    }
+ 
+  
+    ul {
+      list-style-type: none;
+      font-family: helvetica;
+      font-size: 18px;
+      font-weight: 200;
+      margin-top: 10px;
+      margin-right: 0px;
+      margin-bottom: 0px;
+      margin-left: 0px;
+      padding: 0;
+      overflow: hidden;
+      width: 100%;
+      background-color: #333;
+      height: 50px;
+    }
+
+    li {
+      float: left;
+    }
+
+    li a {
+      display: block;
+      color: #f8f8ff; 
+      text-align: center;
+      padding: 15px;
+      background-color: #333;
+      margin: 0;
+      text-decoration: none;
+    }
+        
+    .active {
+      background-color: #ed9e2e;
+    }
+
+    li a:hover:not(.active) {
+      background-color: #111;
+    }
+    
+    .div-img {
+      margin-right: 10px;
+    }
+
+    a.socials {
+      background-color: #333;
+      text-decoration: none;
+      padding-right: 20px;
+      float: right;
+    }
+        
+    .popout {
+      height: 50px;
+      width: 50px;
+    }    
+
+    .popout:hover{
+      transform: scale(1.2);
+    }
+
+
+
+    section {
+      width: 100%;
+    }
+
+    .pitchcontainer {
+      font-size: 2.9vw;
+      color: #ffb347;
+      width: 50%;
+      text-align: justify;
+      float: right;
+      padding-right:20px;
+    }
+                 
+    .pitchcontainer span {
+      display: block;
+      padding-right: 20px;
+      padding-left: 20px;
+      padding-bottom: 20px;
+      float: left;
+      width:70%;
+    }
+                 
+    .pitchcontainer img {
+      float: right;
+      width: 30%;
+      display:block;
+      border-radius: 16px;
+    }
+
+    .contact {
+      display:block;
+      float: right;
+      text-align: right;
+      padding-top: 10px;
+    }
+
+    a.four {
+      color: #ffb347;
+    }
+
+    a.four:link {
+      text-decoration: none;
+    }
+   
+    a.four:visited {
+      text-decoration: none;
+    }
+   
+    a.four:hover {
+      color: #f8f8ff;
+    }
+    
+    
+
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+      
+    .players {
+      width: 50%;
+      float:right;
+      padding: 0px 20px 60px 20px;
+      overflow: hidden;
+    }
+          
+    .players iframe {
+      aspect-ratio: 16/9;
+      width: 100% !important;
+      border-radius: 12px;
+      border-width: 0.1vw;
+      border-style: solid;
+      border-color: #ffe6c2;
+      background-color: grey;
+    }
+
+
+
+
+    @media screen and (max-width: 1010px) {
+      body{ 
+        background-size: auto;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+      }
+
+      .pitchcontainer{
+        width: 100%;
+        font-size: 35px;
+        padding-top: 10px;
+        padding-right: 0px;
+        padding-left: 0px;
+      }
+      
+      .pitchcontainer span {
+        width: 100%;
+        padding: 0px 20% 20px 20%;
+      }
+      
+      .pitchcontainer img {
+        display: none;
+      }
+      
+      .contact {
+        width: 100%;
+        padding: 15px 20% 30px 20%;
+      }
+                
+      .players {
+        width: 100%;
+        padding: 0px 60px 60px;
+      }
+      
+      .players iframe {
+        border-width: 0.2vw;
+
+      }
+    }
+
+
+
+    /* adapt for phones */
+    @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+      body{ 
+        background-size: 1266px 1379px;
+        background-repeat: repeat-y;
+      }
+
+      ul {
+        font-size: 35px;
+        font-weight: 400;
+        height: 100px;
+        margin-top: 0px;
+        margin-right: 0px;
+        margin-bottom: 0px;
+        margin-left: 0px;
+      }
+    
+      li a {
+        padding-top: 30px;
+        padding-left: 17px;
+        padding-right: 17px;
+        font-weight: 400;
+      }
+
+      .active {
+        height: 100px;
+      }
+
+      li a:hover:not(.active) {
+        background-color: #111;
+        height: 100px;
+      }
+
+      .popout {
+        height: 100px;
+        width: 100px;
+        float: right;
+      }
+
+      a.socials {
+        padding-bottom: 20px;
+        float: right;
+      }
+            
+      .pitchcontainer {
+        font-size: 75px;
+        font-weight: 500;
+        color: white;
+      }
+      
+    }
+    
+    @media screen and (-webkit-min-device-pixel-ratio:0) { 
+         ::i-block-chrome,.pitchcontainer {
+           font-size: 75px;
+          font-weight: 500;
+          color: white;
+        }
+
+    }
+
+  </style>
+</head>
+
+
+
+<body>
+
+  <header> 
+      <nav>
+        <ul>
+          <li><a class="active" href="https://www.oscarlyons.com">Home</a></li>
+          <li><a href="https://oscarlyons.com/soundtracks">Soundtracks</a></li>
+          <li><a href="https://oscarlyons.com/booking">Booking</a></li>
+          <li><a href="https://oscarlyons.com/bio">Bio</a></li>
+
+          <div class="div-img">
+            <a class="socials" href="https://www.youtube.com/channel/UCkj3Bx0urqkPQqTnxgvJ8Vg/featured" target="_blank"><img class="popout" src="https://i.ibb.co/GCf95Nd/youtube-2.png"alt="Link to Youtube"></a>
+            <a class="socials" href="https://www.instagram.com/oscar.j.lyons/" target="_blank"><img class="popout" src="https://i.ibb.co/Rv9m42z/insta-logo-2.png" alt="Link to Instagram"></a>
+          <div>
+        </ul>
+      </nav>
+      <br>        
+  </header>
+
+  <main>
+  
+    <section>
+    
+      <div class="pitchcontainer">
+        <img src="https://i.postimg.cc/tRPSw4BK/JD-Wedding-cropped.jpg" width="220" alt="Oscar Lyons"/>
+        <span>Oscar Lyons plays a soulful mix of voice and guitar covers that make a beautiful addition to cafes, bars, weddings and other events. Check out some of the videos here and get in touch to discuss your event.
+        </span>
+        <div class="contact">
+          <a class="four" href="mailto:oscarlyonsmusic@gmail.com?" target="_blank">oscarlyonsmusic@gmail.com
+          </a>
+          <br>
+          &zwj;+34 684316504
+        </div>
+      </div>
+      
+      
+      <div class="row">
+
+        <div class="players">
+          <iframe src="https://www.youtube.com/embed/vAHWwuEjWhc?si=10pwHOEaWBmgeMNV&rel=0" frameborder="true" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"mozallowfullscreen="mozallowfullscreen" msallowfullscreen="msallowfullscreen" oallowfullscreen="oallowfullscreen" webkitallowfullscreen="webkitallowfullscreen">
+          </iframe>
+        </div>
+
+
+        <div class="players">
+          <iframe src="https://www.youtube.com/embed/5QhUoA-u3To?si=Gqj4WE9PU-Ge4cvE&rel=0" frameborder="true" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"mozallowfullscreen="mozallowfullscreen" msallowfullscreen="msallowfullscreen" oallowfullscreen="oallowfullscreen" webkitallowfullscreen="webkitallowfullscreen">
+          </iframe>
+        </div>
+
+
+        <div class="players">
+          <iframe src="https://www.youtube.com/embed/PNgykvh7WB0?si=6xdO1KB_EzV3_5AO&rel=0" frameborder="true" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"mozallowfullscreen="mozallowfullscreen" msallowfullscreen="msallowfullscreen" oallowfullscreen="oallowfullscreen" webkitallowfullscreen="webkitallowfullscreen">
+          </iframe>
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+</body>
+</html>
