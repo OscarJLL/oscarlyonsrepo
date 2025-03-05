@@ -1,4 +1,7 @@
-    * {
+_::-webkit-full-page-media, _:future, :root .safari_only {
+  max-width: 10px;}
+
+* {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
