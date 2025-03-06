@@ -1,48 +1,3 @@
-/* adapt safari */
-  .browser-safari body{ 
-    background-size: auto;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-  }
-  
-
-  .browser-safari .pitchcontainer{
-    width: 100%;
-    font-size: 45px;
-    padding-top: 10px;
-   }
-      
-  .browser-safari .pitchcontainer span {
-    width: 100%;
-    padding: 0px 20% 10px 20%;
-  }
-      
-  .browser-safari .pitchcontainer img {
-    display: none;
-  }
-      
-  .browser-safari .contact {
-    width: 100%;
-    padding: 10px 20% 40px 20%;
-  }
-  
-  .browser-safari .players {
-    width:70% !important;
-    float:none;
-    height: 0;
-    padding:0px 0px 39.37% 0px;
-    margin: 50px auto;
-    position: relative;
-  }
-      
-  .browser-safari .players iframe {
-    border-width: 0.2vw;
-    width: 100%;
-    height: 100%;
-    position:absolute;
-    overflow:hidden;
-  }
-   
     * {
       box-sizing: border-box;
       margin: 0;
@@ -68,11 +23,8 @@
       background-attachment: fixed;
       background-color: #131720;
       background-repeat: no-repeat;
-        
-
     }
  
-  
     ul {
       list-style-type: none;
       font-family: helvetica;
@@ -132,18 +84,19 @@
     }
 
 
-
     section {
       width: 100%;
     }
 
     .pitchcontainer {
-      font-size: 2.8vw;
+      font-size: 2.6vw;
       color: #ffb347;
       width: 50%;
       text-align: justify;
       float: right;
       padding-right:20px;
+      margin: 0;
+      text-decoration: none;
     }
                  
     .pitchcontainer span {
@@ -163,10 +116,10 @@
     }
 
     .contact {
-      display:block;
       float: right;
       text-align: right;
       padding-top: 10px;
+      width: 100%;
     }
 
     a.four {
@@ -189,24 +142,38 @@
         padding: 0;
     }
     
-    
 
-    .row:after {
-      content: "";
+    .outer:after {
+      content:"";
       display: table;
       clear: both;
     }
+    
+    .inner {
+      width:50%;
+      float: right;
+      margin: 0;
+      padding:0;
+      padding: 21px;
+      position: relative;
+      overflow:hidden;
+    }
+    
       
     .players {
-      width: 50%;
-      float:right;
-      padding: 0px 20px 60px 20px;
-      overflow: hidden;
+      width: 100%;
+      height: 0;
+      padding:0px 0px 56.25% 0px;
+      position: relative;
+      overflow:hidden;
+      margin:0;
     }
+     
           
     .players iframe {
-      aspect-ratio: 16/9;
-      width: 100% !important;
+      height: 100%;
+      width: 100%;
+      position: absolute;
       border-radius: 12px;
       border-width: 0.1vw;
       border-style: solid;
@@ -214,209 +181,112 @@
     }
 
 
+/* 1 video per row */
+  @media screen and (max-width: 1010px) {
+    body{ 
+      background-size: auto;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+    }
 
-
-    @media screen and (max-width: 1010px) {
-      body{ 
-        background-size: auto;
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-      }
-
-      .pitchcontainer{
-        width: 100%;
-        font-size: 35px;
-        padding-top: 10px;
-        padding-right: 0px;
-        padding-left: 0px;
-      }
+    .pitchcontainer{
+      width: 100%;
+      font-size: 35px;
+      padding-top: 10px;
+      padding-right: 0px;
+      padding-left: 0px;
+    }
       
-      .pitchcontainer span {
-        width: 100%;
-        padding: 0px 20% 20px 20%;
-      }
+    .pitchcontainer span {
+      width: 100%;
+      padding: 0px 20% 20px 20%;
+    }
       
-      .pitchcontainer img {
-        display: none;
-      }
+    .pitchcontainer img {
+      display: none;
+    }
       
-      .contact {
-        width: 100%;
-        padding: 15px 20% 30px 20%;
-      }
+    .contact {
+      width: 100%;
+      padding: 15px 20% 30px 20%;
+    }
                 
-      .players {
-        width: 100%;
-        padding: 0px 60px 60px;
-      }
+    .inner {
+      width: 100%;
+      padding: 0px 60px 60px;
+    }
       
-      .players iframe {
-        border-width: 0.2vw;
+    .players iframe {
+      border-width: 0.2vw;
+        
+    }
+      
+  }
 
+/* adapt for phones */
+  @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    body{ 
+      background-size: 1266px 1379px;
+      background-repeat: repeat-y;
       }
+
+
+    ul {
+      font-size: 35px;
+      font-weight: 400;
+      height: 100px;
+      margin-top: 0px;
+      margin-right: 0px;
+      margin-bottom: 0px;
+      margin-left: 0px;
+    }
+    
+    li a {
+      padding-top: 30px;
+      padding-left: 17px;
+      padding-right: 17px;
+      font-weight: 400;
     }
 
+    .active {
+      height: 100px;
+    }
 
+    li a:hover:not(.active) {
+      background-color: #111;
+      height: 100px;
+    }
 
-    /* adapt for phones */
-    @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-      body{ 
-        background-size: 1266px 1379px;
-        background-repeat: repeat-y;
-      }
+    .popout {
+      height: 100px;
+      width: 100px;
+      float: right;
+    }
 
-      ul {
-        font-size: 35px;
-        font-weight: 400;
-        height: 100px;
-        margin-top: 0px;
-        margin-right: 0px;
-        margin-bottom: 0px;
-        margin-left: 0px;
-      }
-    
-      li a {
-        padding-top: 30px;
-        padding-left: 17px;
-        padding-right: 17px;
-        font-weight: 400;
-      }
+    a.socials {
+      padding-bottom: 20px;
+      float: right;
+    }
 
-      .active {
-        height: 100px;
-      }
-
-      li a:hover:not(.active) {
-        background-color: #111;
-        height: 100px;
-      }
-
-      .popout {
-        height: 100px;
-        width: 100px;
-        float: right;
-      }
-
-      a.socials {
-        padding-bottom: 20px;
-        float: right;
-      }
-            
-      .pitchcontainer {
-        font-size: 75px;
-        font-weight: 500;
-        color: white;
-      }
+ 
+    .pitchcontainer {
+      font-size: 75px;
+      font-weight: 500;
+      color: white;
+    }
       
-      .pitchcontainer span {
-        width: 100%;
-        padding: 0px 15% 20px 15%;
-      }
+    .pitchcontainer span {
+      width: 100%;
+      padding: 0px 15% 20px 15%;
+    }
       
-      .contact {
-       width: 100%;
-       padding: 15px 20% 30px 20%;
-      }
+    .contact {
+      width: 100%;
+      padding: 15px 15% 30px 15%;
+    }
       
-      a.four {
-      color: white;}
-      
-      
-/* adapt for phones/safari */
-      
-      
-      .browser-safari body{ 
-        background-size: 1266px 1379px;
-        background-repeat: repeat-y;
-      }
-
-      .browser-safari ul {
-        font-size: 35px;
-        font-weight: 400;
-        height: 100px;
-        margin-top: 0px;
-        margin-right: 0px;
-        margin-bottom: 0px;
-        margin-left: 0px;
-      }
-    
-      .browser-safari li a {
-        padding-top: 30px;
-        padding-left: 17px;
-        padding-right: 17px;
-        font-weight: 400;
-      }
-
-      .browser-safari .active {
-        height: 100px;
-      }
-
-      .browser-safari li a:hover:not(.active) {
-        background-color: #111;
-        height: 100px;
-      }
-
-      .browser-safari .popout {
-        height: 100px;
-        width: 100px;
-        float: right;
-      }
-
-      .browser-safari a.socials {
-        padding-bottom: 20px;
-        float: right;
-      }
-      
-      .browser-safari .pitchcontainer{
-        width: 100%;
-        font-size: 75px;
-        font-weight: 500;
-        color: white;
-        padding-top: 10px;
-        padding-right: 0px;
-        padding-left: 0px;
-     }
-     
-     .browser-safari .pitchcontainer span {
-        width: 100%;
-        padding: 0px 15% 20px 15%;
-     }
-     
-     .browser-safari .contact {
-       width: 100%;
-       padding: 15px 15% 20px 15%;
-      }
+    a.four {
+      color: white;
+    }
    
-     .browser-safari a.four {
-        color: white;
-     }
-     
-     .browser-safari .phone {
-         padding:0;
-     }
-      
-     
-     .broswer-safari .phone {
-        padding:0;
-     }
-  
-  
-    .browser-safari .players {
-    width:80% !important;
-    float:none;
-    height: 0;
-    padding:0px 0px 45% 0px;
-    margin: 50px auto;
-    position: relative;
   }
-      
-  .browser-safari .players iframe {
-    border-width: 0.2vw;
-    width: 100%;
-    height: 100%;
-    position:absolute;
-    overflow:hidden;
-    border-width: 0.3vw;
-  }
-      
-    }
